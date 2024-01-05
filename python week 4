@@ -1,0 +1,38 @@
+def meters_to_feet(meters):
+    # Convert meters to feet
+    return meters * 3.28084
+
+def feet_to_meters(feet):
+    # Convert feet to meters
+    return feet / 3.28084
+
+def length_converter():
+    print("Length Converter: Meters <-> Feet")
+
+    try:
+        value = float(input("Enter the length value: "))
+    except ValueError:
+        print("Error: Please enter a valid numeric value.")
+        return
+
+    print("\nChoose conversion direction:")
+    print("1. Meters to Feet")
+    print("2. Feet to Meters")
+
+    try:
+        choice = int(input("Enter your choice (1 or 2): "))
+    except ValueError:
+        print("Error: Please enter a valid numeric choice.")
+        return
+
+    if choice == 1:
+        result = meters_to_feet(value)
+        print(f"{value} meters is equal to {result:.2f} feet.")
+    elif choice == 2:
+        result = feet_to_meters(value)
+        print(f"{value} feet is equal to {result:.2f} meters.")
+    else:
+        print("Error: Invalid choice. Please enter 1 or 2.")
+
+if __name__ == "__main__":
+    le
